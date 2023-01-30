@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 :root {
   --primary: #bc4123;
@@ -31,12 +31,11 @@ button {
 header nav {
   display: flex;
   gap: 16px;
-  justify-content: end;
+  justify-content: flex-end;
   max-width: 1200px;
   margin: 0 auto;
-
 }
-header nav h1{
+header nav h1 {
   margin-right: auto;
   border-bottom: 3px solid var(--primary);
 }
@@ -47,4 +46,10 @@ header nav a {
 }
 header nav a.active {
   background-color: var(--primary);
+}
+
+/* PAGE CONTENT*/
+main {
+  max-width: 1200px;
+  margin: 40px auto;
 }
