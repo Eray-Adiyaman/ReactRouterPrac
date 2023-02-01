@@ -1,7 +1,7 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 export default function CareerDetails() {
-  const { id } = useParams();
+  // const { id } = useParams();
   const career = useLoaderData();
 
   return (
@@ -26,5 +26,10 @@ export const careerDetailsLoader = async ({ params }) => {
 
   const res = await fetch("http://localhost:4000/careers/" + id);
 
-  return res.json();
+  if(!res.ok){
+    throw Error("Could not find element")
+  } 
+  return res.json()
+
+  
 };
